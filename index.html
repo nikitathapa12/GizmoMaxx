@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <title>GizmoHub</title>
+  <style>
+    .carousel-item {
+      display: none;
+    }
+    .carousel-item.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+<!-- Header Section -->
+<header class="bg-gray-100">
+  <div class="container mx-auto flex justify-between items-center p-5">
+    <div class="text-2xl font-bold">GizmoMax</div>
+    <nav class="hidden md:flex space-x-4">
+      <a href="#home" class="text-gray-700 hover:text-black underline">Home</a>
+      <a href="#product" class="text-gray-700 hover:text-black underline">Product</a>
+      <a href="#reviews" class="text-gray-700 hover:text-black underline">Reviews</a>
+      <a href="#contact" class="text-gray-700 hover:text-black underline">Contact</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden text-gray-700 hover:text-black focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden">
+    <a href="#home" class="block text-gray-700 hover:text-black p-2">Home</a>
+    <a href="#product" class="block text-gray-700 hover:text-black p-2">Product</a>
+    <a href="#reviews" class="block text-gray-700 hover:text-black p-2">Reviews</a>
+    <a href="#contact" class="block text-gray-700 hover:text-black p-2">Contact</a>
+  </div>
+</header>
+
+
+<section id="home" class="py-10 mt-10 text-center">
+  <div class="container mx-auto">
+    <div class="carousel relative">
+      <img class="carousel-item active mx-auto h-96 w-[220px] mb-4" src="image1.jpg" alt="GizmoMax Image 1">
+      <img class="carousel-item mx-auto h-96 w-[220px] mb-4" src="image2.jpg" alt="GizmoMax Image 2">
+      <img class="carousel-item mx-auto h-96  w-[220px] mb-4" src="image3.jpg" alt="GizmoMax Image 3">
+      <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1" onclick="prevItem()">&#10094;</button>
+      <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1" onclick="nextItem()">&#10095;</button>
+    </div>
+    <h1 class="text-4xl font-bold text-black">Meet the GizmoMax</h1>
+    <p class="text-xl text-black mt-2">The Future of Technology in Your Hands</p>
+    <a href="#product" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">Learn More</a>
+  </div>
+</section>
+
+<!-- Product Details Section -->
+<section id="product" class="py-10">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">GizmoMax Features</h2>
+    <p class="mb-6">Experience cutting-edge technology with the GizmoMax, featuring the latest innovations to enhance your lifestyle.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-4">
+        <img class="mx-auto mb-4" src="image4.jpg" alt="GizmoMax Product 1">
+        <h3 class="text-xl font-bold">Speaker</h3>
+        <p>Distortion, loudness and portability.</p>
+        <p class="text-xl font-bold mt-6">$40</p>
+    <button  class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded">Buy Now</button>
+      </div>
+      <div class="p-4">
+        <img class="mx-auto mb-4" src="image5.jpg" alt="GizmoMax Product 2">
+        <h3 class="text-xl font-bold">Samsung s24</h3>
+        <p>All features. Helpful features. Google TV remote. Android Auto media and games. Accessibility. Camera Switches. Project Activate. </p>
+        <p class="text-xl font-bold mt-6">$1200</p>
+        <button  class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded">Buy Now</button>
+      </div>
+      <div class="p-4">
+        <img class="mx-auto mb-4" src="image6.jpg" alt="GizmoMax Product 3">
+        <h3 class="text-xl font-bold">Laptop</h3>
+        <p>An all-in-one design, with a built-in monitor, keyboard, touchpad (which replaces the mouse), and speakers.</p>
+        <p class="text-xl font-bold mt-6">$499</p>
+        <button  class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded">Buy Now</button>
+      </div>
+    </div>
+   
+  </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section id="reviews" class="bg-gray-100 py-10">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">Customer Reviews</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <p class="text-lg">"Amazing product! It has changed the way I interact with technology."</p>
+        <p class="text-sm text-gray-600 mt-2">- John Doe</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <p class="text-lg">"The best investment I've made in a long time."</p>
+        <p class="text-sm text-gray-600 mt-2">- Jane Smith</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <p class="text-lg">"Highly recommend the GizmoMax for anyone looking for top-notch tech."</p>
+        <p class="text-sm text-gray-600 mt-2">- Alex Johnson</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-10">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+    <form class="max-w-lg mx-auto">
+      <div class="mb-4">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <textarea name="message" placeholder="Your Message" class="w-full p-2 border border-gray-300 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2024 GizmoHub. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="#" class="text-white hover:text-gray-400">Facebook</a>
+      <a href="#" class="text-white hover:text-gray-400">Twitter</a>
+      <a href="#" class="text-white hover:text-gray-400">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle functionality
+  document.getElementById('menu-btn').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+
+  // Carousel functionality
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.carousel-item');
+  const totalItems = items.length;
+
+  function showItem(index) {
+    items.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextItem() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    showItem(currentIndex);
+  }
+
+  function prevItem() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    showItem(currentIndex);
+  }
+
+  // Automatically change the carousel item every 3 seconds
+  setInterval(nextItem, 3000);
+</script>
+
+</body>
+</html>
